@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Books;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,10 @@ class BooksController extends Controller
      */
     public function index()
     {
-        //
+        dd(__METHOD__);
+        $books = Books::all();
+
+        return view('books', compact($books));
     }
 
     /**

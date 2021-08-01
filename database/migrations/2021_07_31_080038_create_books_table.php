@@ -15,15 +15,18 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('author_id');
 
+            $table->string('slug')->unique();
             $table->string('name');
             $table->date('dateCreat');
 
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreignId('author_id')->references('id')->on('author');
+            $table->foreignId('author_id')
+                ->nullable()
+                ->constrained('authors')
+                ->onDelete('set null');
         });
     }
 
