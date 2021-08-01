@@ -14,11 +14,15 @@ class CreateAuthorsTable extends Migration
     {
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('author_id');
+            $table->unsignedBigInteger('parent_id');
+            $table->string('slug');
+            $table->string('name');
+            $table->date('dateBirth');
 
             $table->timestamps();
+            $table->softDeletes();
         });
-    }1
+    }
 
     /**
      * Reverse the migrations.
