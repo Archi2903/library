@@ -16,7 +16,6 @@ class BooksController extends Controller
     public function index()
     {
         $books = Books::all();
-
         return view('books', compact('books'));
     }
 
@@ -27,7 +26,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -38,51 +37,7 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd(__METHOD__);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param int $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

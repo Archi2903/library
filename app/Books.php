@@ -11,4 +11,10 @@ class Books extends Model
         'name',
         'dateCreate',
     ];
+
+    public function books()
+    {
+
+        return $this->belongsTo(Authors::class);
+    }
 }
