@@ -11,9 +11,9 @@
         @foreach($books as $book)
             <tr>
                 <td>{{$book->id}}</td>
-                <td>{{$book->name}}</td>
-                <td>{{$book->dateCreat}}</td>
-                <td>{{$book->authors->id}}</td>
+                <td>{{$book->bookname}}</td>
+                <td>{{$book->created_at}}</td>
+                <td>{{$book->author_id}}</td>
             </tr>
         @endforeach
     </table>

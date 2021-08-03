@@ -17,16 +17,16 @@ class CreateBooksTable extends Migration
             $table->id();
 
             $table->string('slug')->unique();
-            $table->string('name');
-            $table->date('dateCreat');
+            $table->string('bookname');
 
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreignId('author_id')
-                ->nullable()
-                ->constrained('authors')
-                ->onDelete('set null');
+            $table->foreignId('author_id')->references('id')->on('authors');
+//            $table->foreignId('author_id')
+//                ->nullable()
+//                ->constrained('authors')
+//                ->onDelete('set null');
         });
     }
 
