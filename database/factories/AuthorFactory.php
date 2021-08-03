@@ -3,16 +3,19 @@
 /** @var Factory $factory */
 
 
+use App\Author;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-$factory->define(Model::class, function (Faker $faker) {
-    $name = $faker->name;
+$factory->define(Author::class, function (Faker $faker) {
+    $firstName = $faker->firstName;
+    $lastName = $faker->lastName;
     return [
-        'slug'=>Str::lower($name),
-        'name'=>$name,
+        'slug'=>Str::of("$firstName $lastName")->slug('-'),
+        'firstname'=>"$firstName",
+        'lastname'=>"$lastName",
         'dateBirth'=>$faker->date('Y-m-d','2000-01-01'),
         'created_at'=>$faker->dateTimeBetween('-1 years','now')
 

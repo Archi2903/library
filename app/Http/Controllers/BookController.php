@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Books;
+use App\Book;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class BooksController extends Controller
+class BookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        $books = Books::all();
+        $books = Book::all();
         return view('books.books', compact('books'));
     }
 

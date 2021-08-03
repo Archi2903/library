@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Books extends Model
+class Book extends Model
 {
     use SoftDeletes;
 
@@ -18,6 +18,6 @@ class Books extends Model
     public function authors()
     {
 
-        return $this->belongsTo(Authors::class);
+        return $this->belongsTo(Author::class);
     }
 }

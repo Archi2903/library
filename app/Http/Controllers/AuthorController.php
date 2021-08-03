@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers;
 
-use App\Books;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BooksController extends Controller
+class AuthorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +13,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        dd(__METHOD__);
-        $books = Books::all();
-
-        return view('books', compact($books));
+        //
     }
 
     /**

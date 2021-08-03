@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Book;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AuthorsController extends Controller
+class BookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class AuthorsController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
