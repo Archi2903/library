@@ -1,5 +1,7 @@
 <?php
 
+use App\Authors;
+use App\Books;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        factory(Authors::class,10)->create();
+//        factory(Books::class,10)->create();
     }
 }
