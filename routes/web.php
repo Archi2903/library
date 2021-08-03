@@ -1,7 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +18,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'books'], function () {
-    Route::resource( 'library','BookController')->names('books');
+    Route::resource('library', 'BookController')->names('books');
+});
+Route::group(['prefix' => 'authors'], function () {
+    Route::resource('library', 'AuthorController')->names('authors');
 });

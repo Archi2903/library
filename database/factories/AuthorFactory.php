@@ -16,7 +16,7 @@ $factory->define(Author::class, function (Faker $faker) {
         'slug'=>Str::of("$firstName $lastName")->slug('-'),
         'firstname'=>"$firstName",
         'lastname'=>"$lastName",
-        'dateBirth'=>$faker->date('Y-m-d','2000-01-01'),
+        'dateBirth'=>$faker->date('Y-m-d','1950-01-01'),
         'created_at'=>$faker->dateTimeBetween('-1 years','now')
 
     ];

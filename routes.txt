@@ -1,0 +1,41 @@
++--------+-----------+--------------------------------+------------------+------------------------------------------------------------------------+------------+
+| Domain | Method    | URI                            | Name             | Action                                                                 | Middleware |
++--------+-----------+--------------------------------+------------------+------------------------------------------------------------------------+------------+
+|        | GET|HEAD  | /                              |                  | Closure                                                                | web        |
+|        | GET|HEAD  | api/user                       |                  | Closure                                                                | api        |
+|        |           |                                |                  |                                                                        | auth:api   |
+|        | POST      | authors/library                | authors.store    | App\Http\Controllers\AuthorController@store                            | web        |
+|        | GET|HEAD  | authors/library                | authors.index    | App\Http\Controllers\AuthorController@index                            | web        |
+|        | GET|HEAD  | authors/library/create         | authors.create   | App\Http\Controllers\AuthorController@create                           | web        |
+|        | PUT|PATCH | authors/library/{library}      | authors.update   | App\Http\Controllers\AuthorController@update                           | web        |
+|        | GET|HEAD  | authors/library/{library}      | authors.show     | App\Http\Controllers\AuthorController@show                             | web        |
+|        | DELETE    | authors/library/{library}      | authors.destroy  | App\Http\Controllers\AuthorController@destroy                          | web        |
+|        | GET|HEAD  | authors/library/{library}/edit | authors.edit     | App\Http\Controllers\AuthorController@edit                             | web        |
+|        | GET|HEAD  | books/library                  | books.index      | App\Http\Controllers\BookController@index                              | web        |
+|        | POST      | books/library                  | books.store      | App\Http\Controllers\BookController@store                              | web        |
+|        | GET|HEAD  | books/library/create           | books.create     | App\Http\Controllers\BookController@create                             | web        |
+|        | DELETE    | books/library/{library}        | books.destroy    | App\Http\Controllers\BookController@destroy                            | web        |
+|        | PUT|PATCH | books/library/{library}        | books.update     | App\Http\Controllers\BookController@update                             | web        |
+|        | GET|HEAD  | books/library/{library}        | books.show       | App\Http\Controllers\BookController@show                               | web        |
+|        | GET|HEAD  | books/library/{library}/edit   | books.edit       | App\Http\Controllers\BookController@edit                               | web        |
+|        | GET|HEAD  | home                           | home             | App\Http\Controllers\HomeController@index                              | web        |
+|        |           |                                |                  |                                                                        | auth       |
+|        | POST      | login                          |                  | App\Http\Controllers\Auth\LoginController@login                        | web        |
+|        |           |                                |                  |                                                                        | guest      |
+|        | GET|HEAD  | login                          | login            | App\Http\Controllers\Auth\LoginController@showLoginForm                | web        |
+|        |           |                                |                  |                                                                        | guest      |
+|        | POST      | logout                         | logout           | App\Http\Controllers\Auth\LoginController@logout                       | web        |
+|        | POST      | password/confirm               |                  | App\Http\Controllers\Auth\ConfirmPasswordController@confirm            | web        |
+|        |           |                                |                  |                                                                        | auth       |
+|        | GET|HEAD  | password/confirm               | password.confirm | App\Http\Controllers\Auth\ConfirmPasswordController@showConfirmForm    | web        |
+|        |           |                                |                  |                                                                        | auth       |
+|        | POST      | password/email                 | password.email   | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web        |
+|        | GET|HEAD  | password/reset                 | password.request | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web        |
+|        | POST      | password/reset                 | password.update  | App\Http\Controllers\Auth\ResetPasswordController@reset                | web        |
+|        | GET|HEAD  | password/reset/{token}         | password.reset   | App\Http\Controllers\Auth\ResetPasswordController@showResetForm        | web        |
+|        | POST      | register                       |                  | App\Http\Controllers\Auth\RegisterController@register                  | web        |
+|        |           |                                |                  |                                                                        | guest      |
+|        | GET|HEAD  | register                       | register         | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web        |
+|        |           |                                |                  |                                                                        | guest      |
++--------+-----------+--------------------------------+------------------+------------------------------------------------------------------------+------------+
+
