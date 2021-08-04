@@ -1,20 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Date Birthday</th>
-            <th>Date Created</th>
-        </tr>
-        @foreach($authors as $author)
-            <tr>
-                <td>{{$author->id}}</td>
-                <td>{{$author->firstName}} {{$author->lastName}}</td>
-                <td>{{$author->dateBirth}}</td>
-                <td>{{$author->created_at}}</td>
-            </tr>
-        @endforeach
-    </table>
+    @foreach($authors as $author)
+        <a href="{{route('authors.show',$author->id)}}"> <h2>{{$author->firstName}} {{$author->lastName}}</h2></a>
+        <p>Data Birthday: {{$author->dateBirth}}}</p>
+        <br>
+    @endforeach
 @endsection

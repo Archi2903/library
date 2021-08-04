@@ -15,6 +15,8 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
+//            $table->unsignedBigInteger('author_id');
+
 
             $table->string('slug')->unique();
             $table->string('bookname');
@@ -22,7 +24,7 @@ class CreateBooksTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreignId('author_id')->references('id')->on('authors');
+//            $table->foreign('author_id')->references('id')->on('authors');
 //            $table->foreignId('author_id')
 //                ->nullable()
 //                ->constrained('authors')

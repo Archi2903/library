@@ -50,6 +50,54 @@ nav {
   margin-right: 240px;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.intro {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro-img {
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/old-books-arranged-on-shelf-royalty-free-image-1572384534.jpg?crop=0.668xw:1.00xh;0,0&resize=980:*");
+  width: 965px;
+  height: 640px;
+}
+
+.intro .intro-text {
+  background-color: rgba(255, 255, 255, 0.34);
+  color: #000000;
+  position: absolute;
+  font-size: 62px;
+  right: 870px;
+  top: 220px;
+}
+
+.intro-contacts {
+  background-color: #ffcc01;
+  max-width: 590px;
+  position: absolute;
+  right: 170px;
+  top: 638px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.intro-contacts i {
+  color: #f8fafc;
+  margin-right: 30px;
+}
+
+.intro-contacts p {
+  font-size: 18px;
+  margin-right: 60px;
+}
+
 @media screen and (max-width: 765px) {
   .toggle {
     clear: both;
@@ -103,6 +151,40 @@ nav {
 
   .menu li a.logo {
     font-size: 21px;
+    margin-right: 0;
+  }
+
+  .intro {
+    margin-top: 0;
+    display: block;
+    max-width: 100%;
+  }
+
+  .intro-img {
+    background-position: bottom 10px right 200px;
+  }
+
+  .intro .intro-text {
+    position: relative;
+    font-size: 35px;
+    right: -10px;
+    top: 95px;
+    color: #000000;
+  }
+
+  .intro .intro-contacts {
+    position: relative;
+    right: 0;
+    top: -60px;
+    padding: 20px 10px;
+  }
+
+  .intro-contacts i {
+    margin-right: 10px;
+  }
+
+  .intro-contacts p {
+    font-size: 13px;
     margin-right: 0;
   }
 }

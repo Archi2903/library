@@ -12,6 +12,7 @@ $factory->define(Author::class, function (Faker $faker) {
     $firstName = $faker->firstName;
     $lastName = $faker->lastName;
     return [
+        'book_id'=>rand(1,10),
         'slug'=>Str::of("$firstName $lastName")->slug('-'),
         'firstname'=>"$firstName",
         'lastname'=>"$lastName",

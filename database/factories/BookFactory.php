@@ -13,6 +13,5 @@ $factory->define(Book::class, function (Faker $faker) {
         'slug' => Str::of($bookname)->slug('-'),
         'bookname' => $bookname,
         'created_at' => $faker->dateTimeBetween('-20 years', 'now'),
-        'author_id'=>rand(1,10),
     ];
 });

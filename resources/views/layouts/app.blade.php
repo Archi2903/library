@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+{{--    Icons --}}
+    <script src="https://kit.fontawesome.com/c596ee7fec.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="app">
@@ -78,6 +80,16 @@
         @include('layouts.header')
     </header>
     <main class="py-4">
+        <section class="intro wrapper">
+            <div class="intro-img">
+                <p class="intro-text">Find Your Book <br>
+                Modern Books</p>
+            </div>
+            <div class="intro-contacts">
+                <p><i class="fas fa-phone"></i> (000)1234</p>
+                <p><i class="fas fa-map-marker-alt"></i> Voronezh, Russia</p>
+            </div>
+        </section>
         @yield('content')
     </main>
     <footer></footer>

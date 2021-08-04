@@ -14,10 +14,13 @@ class CreateAuthorsTable extends Migration
     {
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('book_id');
             $table->string('slug')->unique();
             $table->string('firstName');
             $table->string('lastName');
             $table->date('dateBirth');
+
+            $table->foreign('book_id')->references('id')->on('books');
 
             $table->timestamps();
             $table->softDeletes();

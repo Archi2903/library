@@ -15,7 +15,8 @@ class Book extends Model
         'dateCreate',
     ];
 
-    public function authors()
+    // Обязательно имя функции в единственном числе
+    public function author()
     {
 
         return $this->belongsTo(Author::class);

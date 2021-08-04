@@ -13,7 +13,8 @@
                 <td>{{$book->id}}</td>
                 <td>{{$book->bookname}}</td>
                 <td>{{$book->created_at}}</td>
-                <td>{{$book->author_id}}</td>
+                <td>{{$book->author->firstName}} {{$book->author->lastName}}</td>
+                <td>{{}}</td>
             </tr>
         @endforeach
     </table>
