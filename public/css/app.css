@@ -65,7 +65,7 @@ nav {
 .intro-img {
   background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/old-books-arranged-on-shelf-royalty-free-image-1572384534.jpg?crop=0.668xw:1.00xh;0,0&resize=980:*");
   width: 965px;
-  height: 640px;
+  height: 540px;
 }
 
 .intro .intro-text {
@@ -82,7 +82,7 @@ nav {
   max-width: 590px;
   position: absolute;
   right: 170px;
-  top: 638px;
+  top: 620px;
   display: flex;
   justify-content: space-between;
   padding: 30px 50px;
@@ -96,6 +96,51 @@ nav {
 .intro-contacts p {
   font-size: 18px;
   margin-right: 60px;
+}
+
+.stats {
+  display: flex;
+  margin-top: 130px;
+}
+
+.stats-line {
+  display: flex;
+}
+
+.stats-text {
+  padding: 40px;
+}
+
+.stats-text h2 {
+  font-size: 40px;
+  margin-top: 70px;
+}
+
+.stats-text p {
+  font-size: 13px;
+  margin-top: 50px;
+  line-height: 27px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: #f6f5f4;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stats-square {
+  font-size: 40px;
+  color: #ffcc01;
+  margin-bottom: 15px;
+}
+
+.square-text {
+  font-size: 14px;
 }
 
 @media screen and (max-width: 765px) {
@@ -161,7 +206,8 @@ nav {
   }
 
   .intro-img {
-    background-position: bottom 10px right 200px;
+    background-position: bottom -1px right 350px top 360px;
+    height: 370px;
   }
 
   .intro .intro-text {
@@ -175,7 +221,7 @@ nav {
   .intro .intro-contacts {
     position: relative;
     right: 0;
-    top: -60px;
+    top: -50px;
     padding: 20px 10px;
   }
 
@@ -186,6 +232,30 @@ nav {
   .intro-contacts p {
     font-size: 13px;
     margin-right: 0;
+  }
+
+  .stats {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .stats-text {
+    padding: 10px;
+  }
+
+  .stats-text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .stats-text p {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .square {
+    height: 120px;
   }
 }
 

@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-{{--    Icons --}}
+    {{--    Icons --}}
     <script src="https://kit.fontawesome.com/c596ee7fec.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -83,11 +83,43 @@
         <section class="intro wrapper">
             <div class="intro-img">
                 <p class="intro-text">Find Your Book <br>
-                Modern Books</p>
+                    Modern Books</p>
             </div>
             <div class="intro-contacts">
                 <p><i class="fas fa-phone"></i> (000)1234</p>
                 <p><i class="fas fa-map-marker-alt"></i> Voronezh, Russia</p>
+            </div>
+        </section>
+        <section class="stats wrapper">
+            <div class="stats-text">
+                <h2> Our's Company'<br>Statistics</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid at commodi debitis delectus
+                    deserunt dolorem dolores doloribus dolorum, ducimus expedita ipsa libero magni maiores officia quae,
+                    quam quidem, rem vero voluptate?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, blanditiis debitis dolorum enim
+                    facere harum id illo iusto molestiae nesciunt.</p>
+            </div>
+            <div class="stats-num">
+                <div class="stats-line">
+                    <div class="square">
+                        <span class="stats-square">1233</span>
+                        <span class="square-text">Books</span>
+                    </div>
+                    <div class="square">
+                        <span class="stats-square">100</span>
+                        <span class="square-text">Authors</span>
+                    </div>
+                </div>
+                <div class="stats-line">
+                    <div class="square">
+                        <span class="stats-square">180</span>
+                        <span class="square-text">Clients</span>
+                    </div>
+                    <div class="square">
+                        <span class="stats-square">1</span>
+                        <span class="square-text">Director</span>
+                    </div>
+                </div>
             </div>
         </section>
         @yield('content')
