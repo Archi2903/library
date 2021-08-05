@@ -6,13 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
-    public function book()
-    {
-        return $this->belongsTo(Book::class);
-    }
 
-    public function getBook()
+// Get all books for Author
+    public function books()
     {
-        return $this->hasOne(Book::class);
+        return $this->hasMany(Book::class);
     }
 }

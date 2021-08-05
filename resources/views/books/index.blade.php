@@ -14,7 +14,7 @@
                 <td>{{$book->bookname}}</td>
                 <td>{{$book->created_at}}</td>
                 <td>{{$book->author->firstName}} {{$book->author->lastName}}</td>
-                <td>{{}}</td>
+                <td>{{$book->author_id}}</td>
             </tr>
         @endforeach
     </table>

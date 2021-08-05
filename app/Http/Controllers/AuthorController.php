@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Author;
+use App\Book;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -16,7 +17,9 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        $authors = Author::all();
+//        $authors = Author::all();
+        $authors = Author::withCount('books')
+            ->get();
         return view('authors.index', compact('authors'));
     }
 
@@ -51,7 +54,8 @@ class AuthorController extends Controller
     {
         $author = Author::find($id);
         $author->load('book');
-        return view('authors.show', compact('author'));
+        $countBook = Author::withCount('book')->get;
+        return view('authors.show', compact('author', 'countBook'));
     }
 
     /**
