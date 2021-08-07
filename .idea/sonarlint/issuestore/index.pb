@@ -20,13 +20,7 @@ N
 resources/views/home.blade.php,a\2\a2a516abb04bf3dd73ba4b569b16cc453e3ac2bb
 X
 (resources/views/layouts/header.blade.php,8\4\84054216a8073416c8d010c1f855db303b476d54
-R
-"database/factories/BookFactory.php,4\0\40919a6cc01febe8140c7e6197bfc096871afc5e
-l
-<database/migrations/2021_07_31_080025_create_books_table.php,6\7\67ca45db61e43c80571db63da39388f348417f68
 n
 >database/migrations/2021_07_31_080026_create_authors_table.php,9\7\973c7221377790409768841f07009f56229bd119
 V
 &resources/views/authors/show.blade.php,e\3\e331ab83e9675f00a7a5fc6706a78b90b4fb59d9
-U
-%resources/views/books/index.blade.php,1\e\1e496a3bfae2007d434042631c7356d811fe8a51

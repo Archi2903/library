@@ -19,6 +19,7 @@ class CreateBooksTable extends Migration
 
 
             $table->string('slug')->unique();
+            $table->tinyInteger('mark');
             $table->string('bookname');
 
             $table->timestamps();

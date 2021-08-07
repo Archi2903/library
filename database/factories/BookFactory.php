@@ -11,6 +11,7 @@ $factory->define(Book::class, function (Faker $faker) {
     $bookname = $faker->sentence(3);
     return [
         'slug' => Str::of($bookname)->slug('-'),
+        'mark'=>rand(1,5),
         'bookname' => $bookname,
         'created_at' => $faker->dateTimeBetween('-20 years', 'now'),
         'author_id'=>rand(1,10),
