@@ -14,8 +14,6 @@ v
 Fdatabase/migrations/2014_10_12_100000_create_password_resets_table.php,e\f\eff59cfca55470b5a81fdbeb82498e8bfe5c8174
 R
 "database/factories/UserFactory.php,3\4\3401747fc769758d97931473eab6222bc2abf009
-T
-$database/factories/AuthorFactory.php,3\e\3e7bd3e7446409ea09d6c101fb4f996238dc1e73
 N
 resources/views/home.blade.php,a\2\a2a516abb04bf3dd73ba4b569b16cc453e3ac2bb
 X

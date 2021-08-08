@@ -26,4 +26,41 @@
                     </div>
         @endforeach
     </section>
+{{--    @auth()--}}
+        <div class="container">
+            <div class="row">
+                <div class="coll-md-12">
+                    <nav class="navbar navbar-toggler-md navbar-dark bg-dark">
+                        <a href="#" class="btn btn-primary">Add book</a>
+                    </nav>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Books</th>
+                                    <th>Author</th>
+                                    <th>Data created</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($books as $book)
+                                    <tr>
+                                        <td>{{$book->id}}</td>
+                                        <td>{{$book->bookname}}</td>
+                                        <td>{{$book->author->firstName}}{{$book->author->lastName}}</td>
+                                        <td>
+                                            {{$book->created_at}}
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{{--    @endauth--}}
 @endsection

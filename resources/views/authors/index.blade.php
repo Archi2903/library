@@ -2,48 +2,64 @@
 
 @section('content')
     <section class="library">
-        <div class="wrapper libr">
-            <h2> More than 100+<br> Add new books everyDay</h2>
-            <div class="cards">
-                @foreach($authors as $author)
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="coll-md-12">
+{{--                    @auth()--}}
+                        <nav class="navbar navbar-toggler-md navbar-dark bg-dark">
+                            <a href="#" class="btn btn-primary">Add author</a>
+                        </nav>
+{{--                    @endauth--}}
                     <div class="card">
-                        <img
-                            src="https://s3-us-east-2.amazonaws.com/maryville/wp-content/uploads/2020/01/07163629/author-at-work.jpg"
-                            alt="book" style="height: 230px">
-                        <div class="card-container">
-                            <p>Author: <a
-                                    href="{{route('authors.show',$author->id)}}">{{$author->firstName}} {{$author->lastName}}</a>
-                            </p>
-                            <div class="card-info">
-                                <div class="money">$3,5</div>
-                                <div class="info">
-                                    <span><i class="fab fa-amazon-pay"></i>123</span>
-                                    <span><i class="fas fa-book-open"></i>{{$author->books_count}}</span>
-                                </div>
-                            </div>
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Author</th>
+                                    <th>Data Birthday</th>
+                                    <th>Books</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($authors as $author)
+                                    <tr>
+                                        <td>{{$author->id}}</td>
+                                        <td>
+                                            <a href="#">{{$author->firstName}} {{$author->lastName}}</a>
+                                        </td>
+                                        <td>{{$author->dateBirth}}</td>
+                                        <td>
+                                            {{$author->books_count}}
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                @endforeach
-            </div>
-            <div class="button-search">
-                <form action="#">
-                    <input type="text" placeholder="Search Location">
-                    <input type="submit" value="Search">
-                </form>
-                <button class="all">View all Authors</button>
+                </div>
             </div>
         </div>
+        <div class="button-search">
+            <form action="#">
+                <input type="text" placeholder="Search Location">
+                <input type="submit" value="Search">
+            </form>
+            <button class="all">View all Authors</button>
+        </div>
+
 
     </section>
-{{--    @foreach($authors as $author)--}}
-{{--        <h2> Author: <a href="{{route('authors.show',$author->id)}}">{{$author->firstName}} {{$author->lastName}}</a>--}}
-{{--        </h2>--}}
-{{--        <h2>Books: {{$author->books_count}}</h2>--}}
-{{--        <ol>--}}
-{{--            @foreach($author->books as $book)--}}
-{{--                <li>{{$book->bookname}}</li>--}}
-{{--            @endforeach--}}
-{{--        </ol>--}}
-{{--        <br>--}}
-{{--    @endforeach--}}
+    {{--    @foreach($authors as $author)--}}
+    {{--        <h2> Author: <a href="{{route('authors.show',$author->id)}}">{{$author->firstName}} {{$author->lastName}}</a>--}}
+    {{--        </h2>--}}
+    {{--        <h2>Books: {{$author->books_count}}</h2>--}}
+    {{--        <ol>--}}
+    {{--            @foreach($author->books as $book)--}}
+    {{--                <li>{{$book->bookname}}</li>--}}
+    {{--            @endforeach--}}
+    {{--        </ol>--}}
+    {{--        <br>--}}
+    {{--    @endforeach--}}
 @endsection
