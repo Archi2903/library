@@ -22,7 +22,6 @@
     <script src="https://kit.fontawesome.com/c596ee7fec.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <header>
     @include('layouts.header')
 </header>
@@ -32,6 +31,7 @@
 
     @yield('content')
     @include('layouts.main.steps')
+    @include('layouts.main.detailed')
 </main>
 <footer></footer>
 @stack('scripts')

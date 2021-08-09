@@ -303,6 +303,39 @@ nav {
     border-bottom: 3px solid #ffffff;
 }
 
+.detail-container {
+    display: flex;
+    margin-top: 70px;
+}
+
+.detailed img {
+    width: 100%;
+    height: auto;
+}
+
+.detail-img-container {
+    width: 58%;
+}
+.detail-text{
+    width: 42%;
+    margin-left: 3%;
+}
+.detail-text p{
+    margin-bottom: 60px;
+}
+.detailed h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.detailed p{
+    font-size: 13px;
+    line-height: 30px;
+}
+.detailed h4{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
 @media screen and (max-width: 765px) {
     .toggle {
         clear: both;
@@ -419,17 +452,27 @@ nav {
         margin-top: 10px;
         margin-left: 0;
     }
-    .steps-container{
+    .steps-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .stepblock{
+    .stepblock {
         margin-top: 20px;
     }
-    .steps-text, .steps h2{
+    .steps-text, .steps h2 {
         margin-left: 5%;
         margin-bottom: 15px;
+    }
+    .detail-container{
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .detail-img-container{
+        width: 100%;
+    }
+    .detail-text{
+        width: 100%;
     }
 }
 
