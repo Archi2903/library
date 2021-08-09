@@ -20,6 +20,21 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Admin
+$groupData = [
+    'namespace' => 'Admin',
+    'prefix' => 'admin/library',
+];
+
+Route::group($groupData, function () {
+    Route::resource('books', 'BookController')
+        ->names('library.admin.books');
+});
+Route::group($groupData, function () {
+    Route::resource('authors', 'AuthorController')
+        ->names('library.admin.authors');
+});
+
 Route::group(['prefix' => 'books'], function () {
     Route::resource('library', 'BookController')->names('books');
 });

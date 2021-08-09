@@ -1,13 +1,6 @@
 
-_
-/app/Http/Controllers/admin/AuthorController.php,e\f\ef8402b18f98765e5f341404fdb3724cd0fcedf6
-]
--app/Http/Controllers/admin/BookController.php,7\2\72e2fc56de084c3f154e1d99ee1303b6ee8a0395
 Q
 !resources/views/welcome.blade.php,0\c\0c96dd63e07fb2e889aeaea5cbabd89d0d09f1fb
-:
-
-routes.txt,7\a\7ab637219c0b66aeccd6bc516af76b73153ed8d2
 Q
 !database/seeds/DatabaseSeeder.php,1\b\1bfb05dc7f9d1708ffc561e370a53ad2df3db646
 v
@@ -16,9 +9,11 @@ R
 "database/factories/UserFactory.php,3\4\3401747fc769758d97931473eab6222bc2abf009
 N
 resources/views/home.blade.php,a\2\a2a516abb04bf3dd73ba4b569b16cc453e3ac2bb
-X
-(resources/views/layouts/header.blade.php,8\4\84054216a8073416c8d010c1f855db303b476d54
 n
 >database/migrations/2021_07_31_080026_create_authors_table.php,9\7\973c7221377790409768841f07009f56229bd119
 V
 &resources/views/authors/show.blade.php,e\3\e331ab83e9675f00a7a5fc6706a78b90b4fb59d9
+B
+public/css/app.css,a\e\aed169877220cb60c39687eb7ae1de7d4fb7946f
+9
+	.htaccess,f\1\f14dd8fe84b7e99eb63debbf029152463832e7ad

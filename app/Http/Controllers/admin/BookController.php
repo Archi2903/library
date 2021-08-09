@@ -15,7 +15,7 @@ class BookController extends Controller
      */
     public function index()
     {
-
+        dd(__METHOD__);
     }
 
     /**

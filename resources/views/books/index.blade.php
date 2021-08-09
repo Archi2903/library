@@ -26,7 +26,7 @@
                     </div>
         @endforeach
     </section>
-{{--    @auth()--}}
+    @auth()
         <div class="container">
             <div class="row">
                 <div class="coll-md-12">
@@ -62,5 +62,5 @@
                 </div>
             </div>
         </div>
-{{--    @endauth--}}
+    @endauth
 @endsection
