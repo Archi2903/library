@@ -1,15 +1,19 @@
 @extends('layouts.app')
-
+@section('main')
+    @include('layouts.main.intro-wrapper')
+    @include('layouts.main.stats-wrapper')
+    @include('layouts.main.steps')
+@endsection
 @section('content')
     <section class="library">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="coll-md-12">
-{{--                    @auth()--}}
-                        <nav class="navbar navbar-toggler-md navbar-dark bg-dark">
-                            <a href="#" class="btn btn-primary">Add author</a>
-                        </nav>
-{{--                    @endauth--}}
+                    {{--                    @auth()--}}
+                    <nav class="navbar navbar-toggler-md navbar-dark bg-dark">
+                        <a href="#" class="btn btn-primary">Add author</a>
+                    </nav>
+                    {{--                    @endauth--}}
                     <div class="card">
                         <div class="card-body">
                             <table class="table table-hover">

@@ -26,12 +26,8 @@
     @include('layouts.header')
 </header>
 <main class="py-4">
-    @include('layouts.main.intro-wrapper')
-    @include('layouts.main.stats-wrapper')
-
+    @yield('main')
     @yield('content')
-    @include('layouts.main.steps')
-    @include('layouts.main.detailed')
 </main>
 <footer></footer>
 @stack('scripts')
