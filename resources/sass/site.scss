@@ -14,6 +14,28 @@ nav {
     width: 100%;
 }
 
+table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #dddddd;
+    border-collapse: collapse;
+}
+
+table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+
+}
+
+table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+    text-align: center;
+}
+
 #checkbox-menu,
 .toggle {
     display: none;
@@ -316,27 +338,39 @@ nav {
 .detail-img-container {
     width: 58%;
 }
-.detail-text{
+
+.detail-text {
     width: 42%;
     margin-left: 3%;
 }
-.detail-text p{
+
+.detail-text p {
     margin-bottom: 60px;
 }
-.detailed h2{
+
+.detailed h2 {
     font-size: 40px;
     margin-bottom: 20px;
 }
-.detailed p{
+
+.detailed p {
     font-size: 13px;
     line-height: 30px;
 }
-.detailed h4{
+
+.detailed h4 {
     font-size: 25px;
     margin-bottom: 25px;
 }
 
+
 @media screen and (max-width: 765px) {
+    table th {
+        font-size: 13px;
+    }
+    table td {
+        font-size: 12px;
+    }
     .toggle {
         clear: both;
         display: block;
@@ -357,7 +391,7 @@ nav {
         transition: all .7s linear;
     }
     #checkbox-menu:checked + label .touch {
-        height: 150px;
+        height: 180px;
     }
     .menu {
         display: flex;
@@ -370,12 +404,12 @@ nav {
     .menu li {
         display: flex;
         align-self: center;
-        width: 95%;
+        width: 100%;
         opacity: 0;
         visibility: hidden;
     }
     .menu li a {
-        width: 95%;
+        width: 100%;
         text-align: center;
         align-self: center;
         align-content: center;
@@ -464,15 +498,16 @@ nav {
         margin-left: 5%;
         margin-bottom: 15px;
     }
-    .detail-container{
+    .detail-container {
         margin-top: 20px;
         flex-direction: column;
     }
-    .detail-img-container{
+    .detail-img-container {
         width: 100%;
     }
-    .detail-text{
+    .detail-text {
         width: 100%;
     }
+
 }
 
