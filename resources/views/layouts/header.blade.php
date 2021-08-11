@@ -5,28 +5,27 @@
             <li><a class="logo" href="#">Library</a></li>
             <li><a href="#">About</a></li>
             @guest
-                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
                 @if (Route::has('register'))
-                    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                    <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
                 @endif
             @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                <li>
+                    <a id="navbarDropdown" href="#" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
+                </li>
+                <li>
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
+                        {{ __('Logout') }}
+                    </a>
+                <li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </li>
                 <li><a href="{{route('library.admin.authors.index')}}">Authors</a></li>
                 <li><a href="{{route('library.admin.books.index')}}">Books</a></li>

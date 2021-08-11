@@ -22,8 +22,6 @@ _
 /resources/views/layouts/main/detailed.blade.php,8\4\846d8c4a9c1a32b583fe44b6b55e7e6c90a6459a
 >
 webpack.mix.js,7\3\73a5f9e927f70e0292701d67f61dbff4fb17febc
-N
-resources/views/home.blade.php,a\2\a2a516abb04bf3dd73ba4b569b16cc453e3ac2bb
 U
 %resources/views/books/index.blade.php,1\e\1e496a3bfae2007d434042631c7356d811fe8a51
 >
