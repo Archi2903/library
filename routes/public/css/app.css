@@ -1,0 +1,541 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);* {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto Condensed, sans-serif;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+nav {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #dddddd;
+  border-collapse: collapse;
+}
+
+table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+
+table td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+  text-align: center;
+}
+
+#checkbox-menu,
+.toggle {
+  display: none;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.menu li a {
+  color: #000000;
+  text-decoration: none;
+  align-self: center;
+  font-size: 13px;
+  padding: 10px 15px;
+  transition: background-color 0.2s linear;
+}
+
+.menu li a:hover {
+  background: #ffce01;
+  border-radius: 3px;
+}
+
+.menu li a.logo {
+  font-size: 25px;
+  margin-right: 240px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.intro {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro-img {
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/old-books-arranged-on-shelf-royalty-free-image-1572384534.jpg?crop=0.668xw:1.00xh;0,0&resize=980:*");
+  width: 965px;
+  height: 540px;
+}
+
+.intro .intro-text {
+  background-color: rgba(255, 255, 255, 0.34);
+  color: #000000;
+  position: absolute;
+  font-size: 62px;
+  right: 870px;
+  top: 220px;
+}
+
+.intro-contacts {
+  background-color: #ffcc01;
+  max-width: 590px;
+  position: absolute;
+  right: 170px;
+  top: 620px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.intro-contacts i {
+  color: #f8fafc;
+  margin-right: 30px;
+}
+
+.intro-contacts p {
+  font-size: 18px;
+  margin-right: 60px;
+}
+
+.stats {
+  display: flex;
+  margin-top: 130px;
+}
+
+.stats-line {
+  display: flex;
+}
+
+.stats-text {
+  padding: 40px;
+}
+
+.stats-text h2 {
+  font-size: 40px;
+  margin-top: 70px;
+}
+
+.stats-text p {
+  font-size: 13px;
+  margin-top: 50px;
+  line-height: 27px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: #f6f5f4;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stats-square {
+  font-size: 40px;
+  color: #ffcc01;
+  margin-bottom: 15px;
+}
+
+.square-text {
+  font-size: 14px;
+}
+
+.library {
+  background: #f6f5f4;
+  padding: 60px 0;
+}
+
+.libr h2 {
+  margin-bottom: 85px;
+  font-size: 40px;
+}
+
+.card {
+  max-width: 345px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-container {
+  padding: 25px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.card-info .money {
+  font-size: 18px;
+  color: #ffcc01;
+}
+
+.card-info i {
+  margin-right: 8px;
+}
+
+.card-info span:first-child {
+  margin-right: 18px;
+}
+
+.card:hover {
+  background: #fafaf9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 30px;
+}
+
+.libr input[type=text] {
+  margin-top: 50px;
+  width: 300px;
+  height: 70px;
+  border: none;
+  background-image: url("https://png.pngtree.com/element_our/20190601/ourmid/pngtree-search-icon-image_1344447.jpg");
+  background-repeat: no-repeat;
+  background-position: 27px;
+  outline: none;
+  padding-left: 62px;
+  font-size: 15px;
+  color: #919eb1;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.libr input[type=submit] {
+  width: 115px;
+  border: none;
+  height: 70px;
+  background: #ffcc01;
+  font-size: 15px;
+  margin-left: -4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.all {
+  width: 250px;
+  height: 70px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 40px;
+  margin-top: 52px;
+  font-size: 15px;
+}
+
+.button-search {
+  display: flex;
+}
+
+.steps h2 {
+  margin-top: 55px;
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+
+.steps-text {
+  line-height: 27px;
+  font-size: 13px;
+}
+
+.mbtext {
+  margin-bottom: 70px;
+}
+
+.stepblock {
+  width: 340px;
+  height: 370px;
+  background: #f8fafc;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.stepblock .step-num {
+  font-size: 200px;
+  position: relative;
+  top: -110px;
+  left: -30px;
+}
+
+.stepblock:hover {
+  background: #ffcc01;
+  color: #fff;
+}
+
+.steps-container {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stepblock h4 {
+  font-size: 14px;
+  margin-left: 40px;
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+
+.stepblock h4 span {
+  margin-right: 15px;
+}
+
+.stepblock .step-info {
+  margin-left: 70px;
+  line-height: 29px;
+}
+
+.stepblock .stepinfolast {
+  display: inline-block;
+  margin-left: 70px;
+  margin-top: 20px;
+  border-bottom: 3px solid #000000;
+}
+
+.stepblock .stepinfolast:hover {
+  border-bottom: 3px solid #ffffff;
+}
+
+.detail-container {
+  display: flex;
+  margin-top: 70px;
+}
+
+.detailed img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-img-container {
+  width: 58%;
+}
+
+.detail-text {
+  width: 42%;
+  margin-left: 3%;
+}
+
+.detail-text p {
+  margin-bottom: 60px;
+}
+
+.detailed h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.detailed p {
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.detailed h4 {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 765px) {
+  table th {
+    font-size: 13px;
+  }
+
+  table td {
+    font-size: 12px;
+  }
+
+  .toggle {
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    width: 100%;
+    color: #000;
+    background: #ffcc01;
+    transition: all 0.1s linear;
+  }
+
+  .toggle:hover {
+    background: #d3a900;
+  }
+
+  #checkbox-menu:checked + label .touch li {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s linear;
+  }
+
+  #checkbox-menu:checked + label .touch {
+    height: 180px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0;
+    transition: height 0.3s linear;
+  }
+
+  .menu li {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .menu li a {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+  }
+
+  .menu li a.logo {
+    font-size: 21px;
+    margin-right: 0;
+  }
+
+  .intro {
+    margin-top: 0;
+    display: block;
+    max-width: 100%;
+  }
+
+  .intro-img {
+    background-position: bottom -1px right 350px top 360px;
+    height: 370px;
+  }
+
+  .intro .intro-text {
+    position: relative;
+    font-size: 35px;
+    right: -10px;
+    top: 95px;
+    color: #000000;
+  }
+
+  .intro .intro-contacts {
+    position: relative;
+    right: 0;
+    top: -50px;
+    padding: 20px 10px;
+  }
+
+  .intro-contacts i {
+    margin-right: 10px;
+  }
+
+  .intro-contacts p {
+    font-size: 13px;
+    margin-right: 0;
+  }
+
+  .stats {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .stats-text {
+    padding: 10px;
+  }
+
+  .stats-text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .stats-text p {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .square {
+    height: 120px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-row-gap: 10px;
+    justify-content: center;
+  }
+
+  .libr input[type=text] {
+    margin-top: 20px;
+    width: 130px;
+  }
+
+  .button-search {
+    flex-direction: column;
+    margin-left: 4%;
+  }
+
+  .all {
+    background: #ffffff;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .steps-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stepblock {
+    margin-top: 20px;
+  }
+
+  .steps-text,
+  .steps h2 {
+    margin-left: 5%;
+    margin-bottom: 15px;
+  }
+
+  .detail-container {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .detail-img-container {
+    width: 100%;
+  }
+
+  .detail-text {
+    width: 100%;
+  }
+}
+

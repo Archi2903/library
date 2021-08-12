@@ -55,9 +55,12 @@ class AuthorController extends Controller
     public function show($id)
     {
         $author = Author::find($id);
-        $author->load('book');
-        $countBook = Author::withCount('book')->get;
-        return view('authors.show', compact('author', 'countBook'));
+//            ->withCount('books')
+//            ->get();
+        $author->load('books');
+//        $countBook = $author->withCount('books')
+//            ->get();
+        return view('authors.show', compact('author'));
     }
 
     /**

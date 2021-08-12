@@ -15,11 +15,12 @@ nav {
 }
 
 table {
-    width: 100%;
+    width: 80%;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 2px solid #dddddd;
     border-collapse: collapse;
+    margin-left: 140px;
 }
 
 table th {
@@ -34,6 +35,11 @@ table td {
     border: 1px solid #dddddd;
     padding: 5px;
     text-align: center;
+}
+
+.td-books {
+    text-align: left;
+    font-family: Roboto, serif;
 }
 
 #checkbox-menu,
@@ -345,7 +351,7 @@ table td {
 }
 
 .detail-text p {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 .detailed h2 {
@@ -365,11 +371,15 @@ table td {
 
 
 @media screen and (max-width: 765px) {
+    table {
+        width: 95%;
+        margin-left: 10px;
+    }
     table th {
         font-size: 13px;
     }
     table td {
-        font-size: 12px;
+        font-size: 10px;
     }
     .toggle {
         clear: both;
@@ -391,7 +401,7 @@ table td {
         transition: all .7s linear;
     }
     #checkbox-menu:checked + label .touch {
-        height: 180px;
+        height: 220px;
     }
     .menu {
         display: flex;

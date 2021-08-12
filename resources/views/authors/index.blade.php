@@ -13,6 +13,7 @@
                 <th>Author</th>
                 <th>Data Birthday</th>
                 <th>Books</th>
+                <th>Books count</th>
             </tr>
             </thead>
             <tbody>
@@ -20,11 +21,16 @@
                 <tr>
                     <td>{{$author->id}}</td>
                     <td>
-                        <a href="#">{{$author->firstName}} {{$author->lastName}}</a>
+                        <a href="{{route('authors.show',$author->id)}}">{{$author->firstName}} {{$author->lastName}}</a>
                     </td>
                     <td>{{$author->dateBirth}}</td>
+                    <td class="td-books">
+                        @foreach($author->books as $book)
+                            <li>{{$book->bookname}}</li>
+                        @endforeach
+                    </td>
                     <td>
-                        {{$author->books_count}}
+                        {{$author->books_count}} book
                     </td>
                 </tr>
             @endforeach

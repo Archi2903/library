@@ -9,11 +9,11 @@
     <div class="stats-num">
         <div class="stats-line">
             <div class="square">
-                <span class="stats-square">1233</span>
+                <span class="stats-square">20</span>
                 <span class="square-text">Books</span>
             </div>
             <div class="square">
-                <span class="stats-square">100</span>
+                <span class="stats-square">10</span>
                 <span class="square-text">Authors</span>
             </div>
         </div>

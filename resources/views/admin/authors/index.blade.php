@@ -3,7 +3,7 @@
     <h1>Admin: Authors</h1>
     <section class="admin-authors">
         <nav>
-            <a href="#" class="">Add authors</a>
+            <a href="{{route('library.admin.authors.create')}}">Add authors</a>
         </nav>
         <table>
             <tr>
@@ -11,6 +11,7 @@
                 <th>Name</th>
                 <th>Date Birthday</th>
                 <th>Books</th>
+                <th>Books name</th>
                 <th>Book ID</th>
                 <th>Date Created</th>
             </tr>
@@ -20,6 +21,12 @@
                     <td>{{$author->firstName}} {{$author->lastName}}</td>
                     <td>{{$author->dateBirth}}</td>
                     <td>{{$author->books_count}}</td>
+
+                    <td>
+                        @foreach($author->books as $book)
+                            <li>{{$book->bookname}}</li>
+                        @endforeach
+                    </td>
                     <td>{{$author->book_id}}</td>
                     <td>{{$author->created_at}}</td>
                 </tr>

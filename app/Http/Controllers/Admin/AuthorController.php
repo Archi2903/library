@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Author;
 use App\Http\Controllers\Controller;
@@ -28,7 +28,7 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.authors.edit');
     }
 
     /**
