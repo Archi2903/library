@@ -1,37 +1,55 @@
 @extends('layouts.app')
 @section('content')
     <section class="form">
-        <form action="library.admin.authors.store" method="post">
+        <form method="post" action="{{route('library.admin.authors.store')}}">
             @csrf
-            <div class="form-group">
-                <label for="firstName">FirstName</label>
-                <input name="firstNam"
-                       value="First Name"
-                       id="title"
-                       type="text"
-                       class="form-control"
-                       minlength="3"
-                       required>
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input name="lastName"
-                       value="Last Name"
-                       id="lastName"
-                       type="text"
-                       class="form-control"
-                       minlength="3"
-                       required>
-            </div>
-            <div class="form-group">
-                <label for="dateBirth">Date Birthday</label>
-                <input name="dateBirth"
-                       value="Date Birthday"
-                       id="dateBirth"
-                       type="date"
-                       class="form-control"
-                       minlength="3"
-                       required>
+            <div class="form-container">
+                <div class="form-main">
+                    <div class="form-group">
+                        <label for="firstName">FirstName</label>
+                        <input name="firstNam"
+                               value="{{$author->firstName}}"
+                               id="firstName"
+                               type="text"
+                               class="form-control"
+                               minlength="3"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input name="lastName"
+                               value="{{$author->lastName}}"
+                               id="lastName"
+                               type="text"
+                               class="form-control"
+                               minlength="3"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateBirth">Date Birthday</label>
+                        <input name="dateBirth"
+                               value="{{$author->dateBirth}}"
+                               id="dateBirth"
+                               type="date"
+                               class="form-control"
+                               minlength="3"
+                               required>
+                    </div>
+                </div>
+                <div class="form-add">
+                    <div class="form-group">
+                        <label for="created">Created</label>
+                        <input type="text" value="{{$author->created_at}}" class="created" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="updated">Updated</label>
+                        <input type="text" value="{{$author->updated_at}}" class="updated" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="deleted">Deleted</label>
+                        <input type="text" value="{{$author->deleted_at}}" class="deleted" disabled>
+                    </div>
+                </div>
             </div>
             <button type="submit">ADD</button>
         </form>

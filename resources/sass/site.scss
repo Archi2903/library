@@ -1,45 +1,27 @@
+
 * {
     padding: 0;
     margin: 0;
     font-family: Roboto Condensed, sans-serif;
 }
 
-body, html {
+body,
+html {
     overflow-x: hidden; //Управляем отображение блочного элемента по горизонтали
 }
+
+// ==========================================================================
+// Header
+// ==========================================================================
+
+
+// Navigation
+// ==========================================================================
 
 nav {
     margin: 0 auto;
     max-width: 1100px;
     width: 100%;
-}
-
-table {
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 2px solid #dddddd;
-    border-collapse: collapse;
-    margin-left: 140px;
-}
-
-table th {
-    font-weight: bold;
-    padding: 5px;
-    background: #efefef;
-    border: 1px solid #dddddd;
-
-}
-
-table td {
-    border: 1px solid #dddddd;
-    padding: 5px;
-    text-align: center;
-}
-
-.td-books {
-    text-align: left;
-    font-family: Roboto, serif;
 }
 
 #checkbox-menu,
@@ -55,7 +37,8 @@ table td {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    list-style-type: none; // Убирает маркеры у ссылок
+    // Убирает маркеры у ссылок
+    list-style-type: none;
 }
 
 .menu li a {
@@ -64,10 +47,12 @@ table td {
     align-self: center;
     font-size: 13px;
     padding: 10px 15px;
-    transition: background-color .2s linear; //Эффект перехода состояние элемента одно в другое
+    //Эффект перехода состояние элемента одно в другое
+    transition: background-color .2s linear;
 }
 
-.menu li a:hover { // Определение стиля элемента при наведение мыши
+// Определение стиля элемента при наведение мыши
+.menu li a:hover {
     background: #ffce01;
     border-radius: 3px;
 }
@@ -76,6 +61,14 @@ table td {
     font-size: 25px;
     margin-right: 240px;
 }
+
+// ==========================================================================
+// Main
+// ==========================================================================
+
+
+// Intro-Wrapper
+// ==========================================================================
 
 .wrapper {
     margin: 0 auto;
@@ -125,6 +118,9 @@ table td {
     margin-right: 60px;
 }
 
+// Stats-Wrapper
+// ==========================================================================
+
 .stats {
     display: flex;
     margin-top: 130px;
@@ -169,6 +165,9 @@ table td {
 .square-text {
     font-size: 14px;
 }
+
+// Library
+// ==========================================================================
 
 .library {
     background: #f6f5f4;
@@ -263,6 +262,9 @@ table td {
     display: flex;
 }
 
+// Steps
+// ==========================================================================
+
 .steps h2 {
     margin-top: 55px;
     font-size: 40px;
@@ -331,6 +333,9 @@ table td {
     border-bottom: 3px solid #ffffff;
 }
 
+// Detail
+// ==========================================================================
+
 .detail-container {
     display: flex;
     margin-top: 70px;
@@ -367,6 +372,94 @@ table td {
 .detailed h4 {
     font-size: 25px;
     margin-bottom: 25px;
+}
+
+// Таблицы
+// ==========================================================================
+
+table {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #dddddd;
+    border-collapse: collapse;
+    margin-left: 140px;
+}
+
+table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+
+}
+
+table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+    text-align: center;
+}
+
+.td-books {
+    text-align: left;
+    font-family: Roboto, serif;
+}
+
+// Forms
+// ==========================================================================
+
+.form-container {
+    display: flex;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+.form-main {
+    width: 60%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-main input[type="text"] {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form-main input[type=date] {
+    width: 95%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.form-add {
+    width: 20%;
+    margin-left: 80px;
+}
+
+.form-add input[type="text"] {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    margin-left: 150px;
+    padding: 20px 30px;
 }
 
 

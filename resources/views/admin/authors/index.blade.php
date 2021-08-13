@@ -18,7 +18,10 @@
             @foreach($authors as $author)
                 <tr>
                     <td>{{$author->id}}</td>
-                    <td>{{$author->firstName}} {{$author->lastName}}</td>
+                    <td>
+                        <a href="{{route('library.admin.authors.edit',$author->id)}}">
+                            {{$author->firstName}} {{$author->lastName}}</a>
+                    </td>
                     <td>{{$author->dateBirth}}</td>
                     <td>{{$author->books_count}}</td>
 
