@@ -29,7 +29,8 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        return view('admin.authors.edit');
+        $author = Author::make();
+        return view('admin.authors.edit', compact('author'));
     }
 
     /**
@@ -51,7 +52,7 @@ class AuthorController extends Controller
      */
     public function show($id)
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
