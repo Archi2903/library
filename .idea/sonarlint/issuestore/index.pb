@@ -5,8 +5,6 @@ v
 Fdatabase/migrations/2014_10_12_100000_create_password_resets_table.php,e\f\eff59cfca55470b5a81fdbeb82498e8bfe5c8174
 R
 "database/factories/UserFactory.php,3\4\3401747fc769758d97931473eab6222bc2abf009
-n
->database/migrations/2021_07_31_080026_create_authors_table.php,9\7\973c7221377790409768841f07009f56229bd119
 9
 	.htaccess,f\1\f14dd8fe84b7e99eb63debbf029152463832e7ad
 >

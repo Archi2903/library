@@ -14,12 +14,12 @@
                             <div class="form-main">
                                 <div class="form-group">
                                     <label for="firstName">FirstName</label>
-                                    <input name="firstNam"
+                                    <input name="firstName"
                                            value="{{$author->firstName}}"
                                            id="firstName"
                                            type="text"
                                            class="form-control"
-                                           minlength="3"
+                                           minlength="1"
                                            required>
                                 </div>
                                 <div class="form-group">
@@ -29,7 +29,7 @@
                                            id="lastName"
                                            type="text"
                                            class="form-control"
-                                           minlength="3"
+                                           minlength="1"
                                            required>
                                 </div>
                                 <div class="form-group">
@@ -40,6 +40,16 @@
                                            type="date"
                                            class="form-control"
                                            minlength="3"
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="slug">Slug</label>
+                                    <input name="slug"
+                                           value="{{$author->slug}}"
+                                           id="slug"
+                                           type="text"
+                                           class="form-control"
+                                           minlength="1"
                                            required>
                                 </div>
                             </div>
@@ -59,6 +69,11 @@
                             </div>
                         </div>
                         <button type="submit">ADD</button>
+                    </form>
+                    <form action="{{route('library.admin.authors.destroy',$author->id)}}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit">Delete</button>
                     </form>
     </section>
 @endsection

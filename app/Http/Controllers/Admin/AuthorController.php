@@ -6,6 +6,7 @@ use App\Author;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Str;
 
 class AuthorController extends Controller
 {
@@ -41,7 +42,10 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        dd(__METHOD__);
+        //Запись
+        $data = $request->input();
+        $author = Author::create($data);
+        return view('admin.authors.edit', compact('author', $author->id));
     }
 
     /**
@@ -50,7 +54,8 @@ class AuthorController extends Controller
      * @param int $id
      * @return Response
      */
-    public function show($id)
+    public
+    function show($id)
     {
         dd(__METHOD__);
     }
@@ -61,7 +66,8 @@ class AuthorController extends Controller
      * @param int $id
      * @return Response
      */
-    public function edit($id)
+    public
+    function edit($id)
     {
         $author = Author::find($id);
         return view('admin.authors.edit', compact('author'));
@@ -74,10 +80,18 @@ class AuthorController extends Controller
      * @param int $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public
+    function update(Request $request, $id)
     {
-        dd(__METHOD__);
-        return view('admin.authors.index');
+        $author = Author::find($id);
+        //Получение данных после изменения
+        $data = $request->all();
+//
+        //Перезапись данных с сохранением
+        $author->fill($data)->save();
+//        $author->wasChanged();
+//        dd($author);
+        return view('admin.authors.edit', compact('author'));
     }
 
     /**
@@ -86,8 +100,10 @@ class AuthorController extends Controller
      * @param int $id
      * @return Response
      */
-    public function destroy($id)
+    public
+    function destroy($id)
     {
-        //
+        Author::find($id)->forceDelete();
+        return redirect(route('library.admin.authors.index'));
     }
 }

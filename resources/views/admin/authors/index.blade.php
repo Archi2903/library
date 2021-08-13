@@ -12,7 +12,6 @@
                 <th>Date Birthday</th>
                 <th>Books</th>
                 <th>Books name</th>
-                <th>Book ID</th>
                 <th>Date Created</th>
             </tr>
             @foreach($authors as $author)
@@ -30,7 +29,6 @@
                             <li>{{$book->bookname}}</li>
                         @endforeach
                     </td>
-                    <td>{{$author->book_id}}</td>
                     <td>{{$author->created_at}}</td>
                 </tr>
             @endforeach
