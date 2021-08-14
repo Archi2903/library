@@ -13,7 +13,7 @@
                         <div class="form-container">
                             <div class="form-main">
                                 <div class="form-group">
-                                    <label for="bookname">BoosName</label>
+                                    <label for="bookname">BookName</label>
                                     <input name="bookname"
                                            value="{{$book->bookname}}"
                                            id="bookname"
@@ -34,13 +34,17 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="author_id">Author ID</label>
-                                    <input name="author_id"
-                                           value="{{$book->author->id}}"
-                                           id="author_id"
-                                           type="number"
-                                           class="form-control"
-                                           minlength="1"
-                                           required>
+                                    <select
+                                        name="author_id"
+                                        id="author_id"
+                                        required>
+                                        @foreach($authorList as $authorOption)
+                                            <option value="{{$authorOption->id}}"
+                                                    @if($authorOption->id == $book->author_id) selected @endif>
+                                                {{$authorOption->id}}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 {{--                                <div class="form-group">--}}
                                 {{--                                    <select name="author_id" id="author_id">--}}
@@ -50,9 +54,12 @@
                                 {{--                                    </select>--}}
                                 {{--                                </div>--}}
                                 <div class="form-group">
-                                    <select name="mark" id="mark">
-                                        <option value="{{$book->mark}}">{{$book->mark}}</option>
-                                    </select>
+                                    <label for="mark">Mark</label>
+                                    <input name="mark"
+                                           id="mark"
+                                           value="{{$book->mark}}"
+                                           type="number"
+                                    >
                                 </div>
                             </div>
                             <div class="form-add">
@@ -71,11 +78,13 @@
                             </div>
                         </div>
                         <button type="submit">ADD</button>
+                        @if($book->exists)
                     </form>
                     <form action="{{route('library.admin.books.destroy',$book->id)}}" method="post">
                         @method('DELETE')
                         @csrf
                         <button type="submit">Delete</button>
                     </form>
+        @endif
     </section>
 @endsection

@@ -53,11 +53,15 @@ V
 &resources/views/authors/show.blade.php,e\3\e331ab83e9675f00a7a5fc6706a78b90b4fb59d9
 Y
 )app/Http/Controllers/AuthorController.php,9\7\97047d18d294caf85834fdb97d98c344df625d8d
->
-app/Author.php,8\1\81f72e4533625cccd9f21c1195ee93f7c2b2c57e
 T
 $database/factories/AuthorFactory.php,3\e\3e7bd3e7446409ea09d6c101fb4f996238dc1e73
 n
 >database/migrations/2021_07_31_080026_create_authors_table.php,9\7\973c7221377790409768841f07009f56229bd119
 B
 public/css/app.css,a\e\aed169877220cb60c39687eb7ae1de7d4fb7946f
+l
+<database/migrations/2021_07_31_080025_create_books_table.php,6\7\67ca45db61e43c80571db63da39388f348417f68
+_
+/resources/views/layouts/main/detailed.blade.php,8\4\846d8c4a9c1a32b583fe44b6b55e7e6c90a6459a
+]
+-resources/views/admin/authors/index.blade.php,c\7\c7cca6f5002969026d4413952cbdc76d232b68ce

@@ -10,9 +10,10 @@ class Book extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'id',
-        'name',
-        'dateCreate',
+        'author_id',
+        'slug',
+        'mark',
+        'bookname',
     ];
 
     // Обязательно имя функции в единственном числе

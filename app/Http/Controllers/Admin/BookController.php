@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Book;
+use App\Author;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use phpDocumentor\Reflection\DocBlock\Tags\Author;
 
 class BookController extends Controller
 {
@@ -28,7 +28,9 @@ class BookController extends Controller
      */
     public function create()
     {
-        dd(__METHOD__);
+        $book = Book::make();
+        $authorList = Author::all();
+        return view('admin.books.edit', compact('book', 'authorList'));
     }
 
     /**
@@ -39,7 +41,10 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        dd(__METHOD__);
+        $data = $request->input();
+        $book = Book::create($data);
+        $authorList = Author::all();
+        return view('admin.books.edit', compact('book', 'authorList', $book->id));
     }
 
     /**
@@ -51,7 +56,8 @@ class BookController extends Controller
     public function edit($id)
     {
         $book = Book::find($id);
-        return view('admin.books.edit', compact('book'));
+        $authorList = Author::all();
+        return view('admin.books.edit', compact('book', 'authorList'));
     }
 
     /**
@@ -63,7 +69,11 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd(__METHOD__);
+        $book = Book::find($id);
+        $authorList = Author::all();
+        $data = $request->all();
+        $book->fill($data)->save();
+        return view('admin.books.edit', compact('book', 'authorList'));
     }
 
     /**

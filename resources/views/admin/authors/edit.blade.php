@@ -70,10 +70,13 @@
                         </div>
                         <button type="submit">ADD</button>
                     </form>
-                    <form action="{{route('library.admin.authors.destroy',$author->id)}}" method="post">
-                        @method('DELETE')
-                        @csrf
-                        <button type="submit">Delete</button>
-                    </form>
+                    @if($author->exists)
+                        <form action="{{route('library.admin.authors.destroy',$author->id)}}" method="post">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit">Delete</button>
+                        </form>
+        @endif
+
     </section>
 @endsection
