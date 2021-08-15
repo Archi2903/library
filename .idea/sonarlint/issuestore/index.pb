@@ -63,5 +63,3 @@ l
 <database/migrations/2021_07_31_080025_create_books_table.php,6\7\67ca45db61e43c80571db63da39388f348417f68
 _
 /resources/views/layouts/main/detailed.blade.php,8\4\846d8c4a9c1a32b583fe44b6b55e7e6c90a6459a
-]
--resources/views/admin/authors/index.blade.php,c\7\c7cca6f5002969026d4413952cbdc76d232b68ce

@@ -29,11 +29,10 @@
                                            id="slug"
                                            type="text"
                                            class="form-control"
-                                           minlength="1"
-                                           required>
+                                    >
                                 </div>
                                 <div class="form-group">
-                                    <label for="author_id">Author ID</label>
+                                    <label for="author_id">Author</label>
                                     <select
                                         name="author_id"
                                         id="author_id"
@@ -41,7 +40,7 @@
                                         @foreach($authorList as $authorOption)
                                             <option value="{{$authorOption->id}}"
                                                     @if($authorOption->id == $book->author_id) selected @endif>
-                                                {{$authorOption->id}}
+                                                {{$authorOption->firstName}} {{$authorOption->lastName}}
                                             </option>
                                         @endforeach
                                     </select>

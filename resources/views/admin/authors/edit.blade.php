@@ -49,8 +49,7 @@
                                            id="slug"
                                            type="text"
                                            class="form-control"
-                                           minlength="1"
-                                           required>
+                                    >
                                 </div>
                             </div>
                             <div class="form-add">

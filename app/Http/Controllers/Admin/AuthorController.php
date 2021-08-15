@@ -17,8 +17,11 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        $authors = Author::withCount('books')
+        $authors = Author::
+        select('id', 'firstName', 'lastName', 'dateBirth', 'created_at')
+            ->withCount('books')
             ->get();
+
         return view('admin.authors.index', compact('authors'));
 
     }
@@ -44,6 +47,10 @@ class AuthorController extends Controller
     {
         //Запись
         $data = $request->input();
+        if (empty($data['slug'])) {
+            $data['slug'] = Str::slug($data['firstName'], '-');
+        }
+
         $author = Author::create($data);
         return view('admin.authors.edit', compact('author', $author->id));
     }
@@ -66,8 +73,7 @@ class AuthorController extends Controller
      * @param int $id
      * @return Response
      */
-    public
-    function edit($id)
+    public function edit($id)
     {
         $author = Author::find($id);
         return view('admin.authors.edit', compact('author'));
@@ -86,11 +92,12 @@ class AuthorController extends Controller
         $author = Author::find($id);
         //Получение данных после изменения
         $data = $request->all();
-//
+        //условие автопрописи lug
+        if (empty($data['slug'])) {
+            $data['slug'] = Str::slug($data['firstName'], '-');
+        }
         //Перезапись данных с сохранением
         $author->fill($data)->save();
-//        $author->wasChanged();
-//        dd($author);
         return view('admin.authors.edit', compact('author'));
     }
 

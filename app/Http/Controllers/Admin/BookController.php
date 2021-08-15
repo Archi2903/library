@@ -7,6 +7,7 @@ use App\Author;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Str;
 
 class BookController extends Controller
 {
@@ -17,7 +18,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
+        $books = Book::select('bookname', 'mark', 'created_at', 'id')
+            ->addSelect(['author' => Author::select('firstName', 'lastName')])
+            ->get();
         return view('admin.books.index', compact('books'));
     }
 
@@ -29,7 +32,8 @@ class BookController extends Controller
     public function create()
     {
         $book = Book::make();
-        $authorList = Author::all();
+        $authorList = Author::select('firstName', 'lastName')
+            ->get();
         return view('admin.books.edit', compact('book', 'authorList'));
     }
 
@@ -42,6 +46,9 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $data = $request->input();
+        if (empty($data['slug'])) {
+            $data['slug'] = Str::slug($data['bookname'], '-');
+        }
         $book = Book::create($data);
         $authorList = Author::all();
         return view('admin.books.edit', compact('book', 'authorList', $book->id));
@@ -72,6 +79,10 @@ class BookController extends Controller
         $book = Book::find($id);
         $authorList = Author::all();
         $data = $request->all();
+        if (empty($data['slug'])) {
+            $data['slug'] = Str::slug($data['bookname'], '-');
+        }
+
         $book->fill($data)->save();
         return view('admin.books.edit', compact('book', 'authorList'));
     }
