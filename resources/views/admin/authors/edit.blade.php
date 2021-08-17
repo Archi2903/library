@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    @include('layouts.main.session')
     <section class="form">
         @if($author->exists)
             {{--        Форма для редактирования автора--}}

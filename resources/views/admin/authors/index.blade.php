@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <h1>Admin: Authors</h1>
+    @include('layouts.main.session')
     <section class="admin-authors container">
         <nav>
             <a href="{{route('library.admin.authors.create')}}">Add authors</a>

@@ -18,9 +18,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::select('bookname', 'mark', 'created_at', 'id')
-            ->addSelect(['author' => Author::select('firstName', 'lastName')])
-            ->get();
+        $books = Book::all();
         return view('admin.books.index', compact('books'));
     }
 
@@ -32,7 +30,7 @@ class BookController extends Controller
     public function create()
     {
         $book = Book::make();
-        $authorList = Author::select('firstName', 'lastName')
+        $authorList = Author::select('id', 'firstName', 'lastName')
             ->get();
         return view('admin.books.edit', compact('book', 'authorList'));
     }
@@ -50,8 +48,11 @@ class BookController extends Controller
             $data['slug'] = Str::slug($data['bookname'], '-');
         }
         $book = Book::create($data);
-        $authorList = Author::all();
-        return view('admin.books.edit', compact('book', 'authorList', $book->id));
+        $authorList = Author::select('id', 'firstName', 'lastName')
+            ->get();
+        return redirect()
+            ->route('library.admin.books.edit', compact('book', 'authorList', $book->id))
+            ->with(['success' => 'Book успешна создана!']);
     }
 
     /**
@@ -63,7 +64,8 @@ class BookController extends Controller
     public function edit($id)
     {
         $book = Book::find($id);
-        $authorList = Author::all();
+        $authorList = Author::select('id', 'firstName', 'lastName')
+            ->get();
         return view('admin.books.edit', compact('book', 'authorList'));
     }
 
@@ -77,14 +79,17 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         $book = Book::find($id);
-        $authorList = Author::all();
+        $authorList = Author::select('id', 'firstName', 'lastName')
+            ->get();
         $data = $request->all();
         if (empty($data['slug'])) {
             $data['slug'] = Str::slug($data['bookname'], '-');
         }
 
         $book->fill($data)->save();
-        return view('admin.books.edit', compact('book', 'authorList'));
+        return redirect()
+            ->route('library.admin.books.edit', compact('book', 'authorList'))
+            ->with(['success' => 'Book успешна изменена!']);
     }
 
     /**
@@ -96,6 +101,8 @@ class BookController extends Controller
     public function destroy($id)
     {
         Book::find($id)->forceDelete();
-        return redirect(route('library.admin.books.index'));
+        return redirect()
+            ->route('library.admin.books.index')
+            ->with(['success' => "Book id=[$id] удалёна!"]);
     }
 }

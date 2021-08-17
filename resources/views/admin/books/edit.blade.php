@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('layouts.main.session')
 @section('content')
     <section class="form">
         @if($book->exists)
@@ -32,7 +33,9 @@
                                     >
                                 </div>
                                 <div class="form-group">
-                                    <label for="author_id">Author</label>
+
+                                    <label
+                                        for="author_id">Author ID</label>
                                     <select
                                         name="author_id"
                                         id="author_id"
@@ -40,10 +43,11 @@
                                         @foreach($authorList as $authorOption)
                                             <option value="{{$authorOption->id}}"
                                                     @if($authorOption->id == $book->author_id) selected @endif>
-                                                {{$authorOption->firstName}} {{$authorOption->lastName}}
+                                                {{$authorOption->id}}
                                             </option>
                                         @endforeach
                                     </select>
+
                                 </div>
                                 {{--                                <div class="form-group">--}}
                                 {{--                                    <select name="author_id" id="author_id">--}}

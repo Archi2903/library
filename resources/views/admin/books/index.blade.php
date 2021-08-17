@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('layouts.main.session')
 @section('content')
     <section class="admin-book container">
         <nav>
@@ -14,7 +15,7 @@
             @foreach($books as $book)
                 <tr>
                     <td><a href="{{route('library.admin.books.edit',$book->id)}}">{{$book->bookname}}</a></td>
-                    <td>{{$author->firstName}}  {{$book->author}}</td>
+{{--                    <td>{{$book->author_id}}</td>--}}
                     <td>{{$book->mark}}</td>
                     <td>{{$book->created_at}}</td>
                 </tr>

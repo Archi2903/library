@@ -63,3 +63,10 @@ l
 <database/migrations/2021_07_31_080025_create_books_table.php,6\7\67ca45db61e43c80571db63da39388f348417f68
 _
 /resources/views/layouts/main/detailed.blade.php,8\4\846d8c4a9c1a32b583fe44b6b55e7e6c90a6459a
+:
+
+routes.txt,7\a\7ab637219c0b66aeccd6bc516af76b73153ed8d2
+H
+resources/sass/site.scss,f\9\f9b69ef0be6cad34235953e3ddd2866e20742521
+>
+app/Author.php,8\1\81f72e4533625cccd9f21c1195ee93f7c2b2c57e

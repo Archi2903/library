@@ -50,9 +50,10 @@ class AuthorController extends Controller
         if (empty($data['slug'])) {
             $data['slug'] = Str::slug($data['firstName'], '-');
         }
-
         $author = Author::create($data);
-        return view('admin.authors.edit', compact('author', $author->id));
+        return redirect()
+            ->route('library.admin.authors.edit', compact('author', $author->id))
+            ->with(['success' => 'Автор успешно создан!']);
     }
 
     /**
@@ -92,13 +93,15 @@ class AuthorController extends Controller
         $author = Author::find($id);
         //Получение данных после изменения
         $data = $request->all();
-        //условие автопрописи lug
+        //условие автопрописи slug
         if (empty($data['slug'])) {
             $data['slug'] = Str::slug($data['firstName'], '-');
         }
         //Перезапись данных с сохранением
         $author->fill($data)->save();
-        return view('admin.authors.edit', compact('author'));
+        return redirect()
+            ->route('library.admin.authors.edit', compact('author'))
+            ->with(['success' => 'Успешно сохранено!']);
     }
 
     /**
@@ -107,10 +110,12 @@ class AuthorController extends Controller
      * @param int $id
      * @return Response
      */
-    public
-    function destroy($id)
+    public function destroy($id)
     {
         Author::find($id)->forceDelete();
-        return redirect(route('library.admin.authors.index'));
+        return redirect()
+            ->route('library.admin.authors.index')
+            ->with(['success' => "Автор id=[$id] удалён!"]);
+
     }
 }
