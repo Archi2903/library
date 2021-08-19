@@ -15,7 +15,7 @@
             @foreach($books as $book)
                 <tr>
                     <td><a href="{{route('library.admin.books.edit',$book->id)}}">{{$book->bookname}}</a></td>
-{{--                    <td>{{$book->author_id}}</td>--}}
+                    <td>{{$book->author->firstName}} {{$book->author->lastName}}</td>
                     <td>{{$book->mark}}</td>
                     <td>{{$book->created_at}}</td>
                 </tr>
