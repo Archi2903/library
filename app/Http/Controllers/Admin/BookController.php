@@ -100,7 +100,11 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        Book::find($id)->forceDelete();
+        //Полное удаление
+        //        Book::find($id)->forceDelete();
+
+        //Удаление с сохранением в БД
+        Book::find($id)->destroy();
         return redirect()
             ->route('library.admin.books.index')
             ->with(['success' => "Book id=[$id] удалёна!"]);

@@ -57,8 +57,6 @@ T
 $database/factories/AuthorFactory.php,3\e\3e7bd3e7446409ea09d6c101fb4f996238dc1e73
 n
 >database/migrations/2021_07_31_080026_create_authors_table.php,9\7\973c7221377790409768841f07009f56229bd119
-B
-public/css/app.css,a\e\aed169877220cb60c39687eb7ae1de7d4fb7946f
 l
 <database/migrations/2021_07_31_080025_create_books_table.php,6\7\67ca45db61e43c80571db63da39388f348417f68
 _
@@ -66,7 +64,5 @@ _
 :
 
 routes.txt,7\a\7ab637219c0b66aeccd6bc516af76b73153ed8d2
-H
-resources/sass/site.scss,f\9\f9b69ef0be6cad34235953e3ddd2866e20742521
 >
 app/Author.php,8\1\81f72e4533625cccd9f21c1195ee93f7c2b2c57e

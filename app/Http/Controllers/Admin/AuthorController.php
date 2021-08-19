@@ -17,8 +17,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        $authors = Author::
-        select('id', 'firstName', 'lastName', 'dateBirth', 'created_at')
+        $authors = Author::select('id', 'firstName', 'lastName', 'dateBirth', 'created_at')
             ->withCount('books')
             ->get();
 
@@ -112,7 +111,7 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        Author::find($id)->forceDelete();
+        Author::find($id)->destroy();
         return redirect()
             ->route('library.admin.authors.index')
             ->with(['success' => "Автор id=[$id] удалён!"]);

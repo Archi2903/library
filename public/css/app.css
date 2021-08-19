@@ -423,6 +423,10 @@ button[type=submit] {
   padding: 20px 30px;
 }
 
+.session {
+  background-color: #38c172;
+}
+
 @media screen and (max-width: 500px) {
   table {
     margin-left: 2px;
