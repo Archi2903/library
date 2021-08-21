@@ -44,4 +44,30 @@
             <button class="all">View all Authors</button>
         </div>
     </section>
+    <section class="authors">
+        <div class="wrapper">
+            <h2>Our authors</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <br> Cupiditate labore natus quas!</p>
+            <div class="author-cards">
+                @foreach($authors as $author)
+                    <div class="author-card">
+                        <img src="/img/author.png" alt="author">
+                        <div class="author-info">
+                            <p>Author</p>
+                            <div class="author-block">
+                                <p class="author-name">{{$author->firstName}} {{$author->lastName}}</p>
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 @endsection

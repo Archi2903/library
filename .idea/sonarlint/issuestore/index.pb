@@ -35,22 +35,10 @@ $resources/views/auth/login.blade.php,f\b\fb3cbd7f4b7fd6fa26794a37d7b2f8f783688
 routes/web.php,6\b\6b9a783d9b43fee50fd28f56dbd1856d2608f305
 N
 resources/views/home.blade.php,a\2\a2a516abb04bf3dd73ba4b569b16cc453e3ac2bb
-X
-(resources/views/layouts/header.blade.php,8\4\84054216a8073416c8d010c1f855db303b476d54
-U
-%resources/views/layouts/app.blade.php,4\e\4e52e2a63befd1dc69600001e78b80ebece1ac9b
-d
-4resources/views/layouts/main/intro-wrapper.blade.php,2\3\237a6d38c7bd5019bc2481907647c8f7c49d309d
 \
 ,resources/views/layouts/main/steps.blade.php,0\f\0fa1f0af3c9fd429ec62e748d02ad4aac49cb408
 d
 4resources/views/layouts/main/stats-wrapper.blade.php,7\c\7cc0c3ba8976230f2676b70296631239e4aa607b
-U
-%resources/views/books/index.blade.php,1\e\1e496a3bfae2007d434042631c7356d811fe8a51
-W
-'resources/views/authors/index.blade.php,e\6\e66d12c82043894104d90f3968c762d63e2a35d3
-V
-&resources/views/authors/show.blade.php,e\3\e331ab83e9675f00a7a5fc6706a78b90b4fb59d9
 Y
 )app/Http/Controllers/AuthorController.php,9\7\97047d18d294caf85834fdb97d98c344df625d8d
 T
@@ -61,8 +49,18 @@ l
 <database/migrations/2021_07_31_080025_create_books_table.php,6\7\67ca45db61e43c80571db63da39388f348417f68
 _
 /resources/views/layouts/main/detailed.blade.php,8\4\846d8c4a9c1a32b583fe44b6b55e7e6c90a6459a
+>
+app/Author.php,8\1\81f72e4533625cccd9f21c1195ee93f7c2b2c57e
+<
+app/Book.php,8\7\87596a800b345146334c0c6f03a1a866be2e8c21
+^
+.resources/views/layouts/main/session.blade.php,0\a\0a78a64485022f9123a86fc21bc431a4b8fcaf89
+]
+-resources/views/admin/authors/index.blade.php,c\7\c7cca6f5002969026d4413952cbdc76d232b68ce
 :
 
 routes.txt,7\a\7ab637219c0b66aeccd6bc516af76b73153ed8d2
->
-app/Author.php,8\1\81f72e4533625cccd9f21c1195ee93f7c2b2c57e
+]
+-app/Http/Controllers/Admin/BookController.php,f\d\fd3567d878cf43ad61d30094c2e97b8edd7d50c1
+Z
+*resources/views/admin/books/edit.blade.php,a\d\adddea893cc54ee7f5299d14149dccb1a6a79822

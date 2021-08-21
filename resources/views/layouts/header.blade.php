@@ -2,7 +2,7 @@
     <input type="checkbox" id="checkbox-menu">
     <label for="checkbox-menu">
         <ul class="menu touch">
-            <li><a class="logo" href="#">Library</a></li>
+            <li><a class="logo" href="{{route('books.index')}}">Library</a></li>
             <li><a href="#">About</a></li>
             @guest
                 <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>

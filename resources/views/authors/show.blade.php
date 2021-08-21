@@ -6,7 +6,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur.</p>
         <div class="detail-container">
             <div class="detail-img-container">
-                <img src="/img/detailed.png" alt="photo">
+                <img src="/img/author 1.png" alt="photo">
             </div>
             <div class="detail-text">
                 @foreach($author->books as $book)
