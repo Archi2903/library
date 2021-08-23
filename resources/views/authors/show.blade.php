@@ -9,6 +9,7 @@
                 <img src="/img/author 1.png" alt="photo">
             </div>
             <div class="detail-text">
+                <h3>Books:</h3>
                 @foreach($author->books as $book)
                     <h4>{{$book->bookname}}</h4>
                     <p>Date Created: {{$book->created_at}}</p>
